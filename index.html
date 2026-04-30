@@ -1,48 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Timeless</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&family=Great+Vibes&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-</head>
-<body>
+    <head>
 
-    <header class="about-header">
-        <h1 class="script-logo">Timeless</h1>
-        <div class="nav-icons">
-            <span>SEARCH</span>
-            <span>FAVORITES</span>
-            <span>CART</span>
+        <meta charset="UTF-8" />
+
+        <!-- viewport - for mobile screens -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- favicon & title -->
+        <link rel="shortcut icon" href="FAVICON LINK HERE" />
+        <title>TITLE HERE</title>
+        <link href="style.css" rel="stylesheet" />
+
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- title -->
+            <div id="title">WELCOME</div>
+
+            <!-- header -->
+            <div id="header"><img src="https://files.catbox.moe/u5ijo7.jpeg" /></div>
+
+            <div id="mainwrapper">
+                <!-- main -->
+                <div id="main">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut placerat orci nulla pellentesque. Erat velit scelerisque in dictum. Dui
+                    ut ornare lectus sit. Dignissim sodales ut eu sem. Neque viverra justo nec ultrices dui sapien. Ut
+                    morbi tincidunt augue interdum velit euismod in. Sit amet justo donec enim diam vulputate ut. Dui
+                    nunc mattis enim ut tellus. Turpis cursus in hac habitasse platea dictumst quisque sagittis purus.
+                    Mattis molestie a iaculis at erat. Magna eget est lorem ipsum dolor.<br /><br />
+
+                    Praesent tristique magna sit amet purus. Sagittis purus sit amet volutpat consequat. Neque egestas
+                    congue quisque egestas diam in arcu. Dapibus ultrices in iaculis nunc sed. Et ligula ullamcorper
+                    malesuada proin libero nunc consequat interdum varius. In eu mi bibendum neque egestas congue
+                    quisque egestas. Malesuada fames ac turpis egestas integer. In cursus turpis massa tincidunt dui ut
+                    ornare lectus sit. Mollis aliquam ut porttitor leo a diam. Egestas sed sed risus pretium.<br /><br />
+
+                    Cras ornare arcu dui vivamus arcu. Adipiscing commodo elit at imperdiet dui accumsan sit amet.
+                    Aliquam id diam maecenas ultricies mi eget mauris pharetra. Eget nulla facilisi etiam dignissim diam
+                    quis. Diam quam nulla porttitor massa id neque aliquam vestibulum morbi. Erat imperdiet sed euismod
+                    nisi porta lorem mollis aliquam. Convallis aenean et tortor at risus viverra adipiscing at in.
+                    Adipiscing at in tellus integer feugiat scelerisque varius morbi. Hac habitasse platea dictumst
+                    vestibulum rhoncus. At varius vel pharetra vel turpis nunc. Ut enim blandit volutpat maecenas
+                    volutpat blandit aliquam etiam. Aliquam ut porttitor leo a diam sollicitudin tempor id. Amet
+                    volutpat consequat mauris nunc congue.<br /><br />
+
+                    <a href="https://www.pixiv.net/en/artworks/101310742">header credit</a>
+                </div>
+
+                <!-- sidebar -->
+                <div id="sidebar">
+                    <!-- updates box -->
+                    <div>
+                        <div class="subtitle">UPDATES</div>
+                        <div class="updates">
+                            3.14.00 - i was born!<br /><br />
+                            8.15.05 - i started kindergarten!<br /><br />
+                            6.15.14 - i graduated from middle school!<br /><br />
+                            6.9.69 - i exploded
+                        </div>
+                    </div>
+
+                    <!-- links -->
+                    <div>
+                        <div class="subtitle">NAVIGATION</div>
+                        <div class="links">
+                            <a href="/">link one</a><br />
+                            <a href="/">link two</a><br />
+                            <a href="/">link three</a><br />
+                            <a href="/">link four</a><br />
+                            <a href="/">link five</a>
+                        </div>
+                    </div>
+
+                    <!-- music -->
+                    <div>
+                        <div class="subtitle">JUKEBOX</div>
+                        <div class="music">
+                            <div id="musicplayer">
+                                <div>
+                                    <marquee scrollamount="8" class="songtitle"></marquee>
+                                </div>
+
+                                <table class="controls">
+                                    <tr>
+                                        <td>
+                                            <div class="prev-track" onclick="prevTrack()">&#171;</div>
+                                        </td>
+                                        <td>
+                                            <div class="playpause-track" onclick="playpauseTrack()">&#9654;</div>
+                                        </td>
+                                        <td>
+                                            <div class="next-track" onclick="nextTrack()">&#187;</div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <div class="seeking">
+                                    <div class="current-time">00:00</div>
+
+                                    <input
+                                        type="range"
+                                        min="1"
+                                        max="100"
+                                        value="0"
+                                        class="seek_slider"
+                                        onchange="seekTo()" />
+
+                                    <div class="total-duration">0:00</div>
+                                </div>
+
+                                <audio id="music" src=""></audio>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- box -->
+                    <div>
+                        <div class="subtitle">TITLE</div>
+                        <div class="box">they call me peanus cus im delirious</div>
+                    </div>
+
+                    <!-- banner -->
+                    <img class="banner" src="https://files.catbox.moe/o7qvmu.png" />
+                    <img class="banner" src="https://files.catbox.moe/4et0ax.jpeg" />
+                </div>
+            </div>
         </div>
-    </header>
 
-    <div class="about-container">
-        <aside class="side-nav">
-            <a href="index.html">CATALOGUE</a>
-            <a href="#">NEW ARRIVALS</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="#">CONTACTS</a>
-        </aside>
-
-        <section class="about-gallery">
-            <div class="img-wrapper tall">
-                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800" alt="Back Detail">
-            </div>
-            <div class="img-wrapper wide">
-                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80&w=800" alt="Front Detail">
-            </div>
-        </section>
-    </div>
-
-    <footer class="about-footer">
-        <button class="cta-btn">TO COLLECTION</button>
-        <p class="footer-text">
-            Winter is a time of the most sincere moments that connect us with 
-            loved ones and our collection reflects the essence of this wonderful time.
-        </p>
-    </footer>
-
-</body>
+        <!-- music player code -->
+        <script src="musicplayer.js"></script>
+    </body>
 </html>
